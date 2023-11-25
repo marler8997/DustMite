@@ -4,5 +4,10 @@ authors "Vladimir Panteleev"
 license "Boost"
 targetPath "."
 sourceFiles "dustmite.d" "polyhash.d" "splitter.d"
+
+# hack in the precompiled ziglex library compiled with
+# zig build-lib -static -fPIC ziglex.zig
+sourceFiles "libziglex.a" "/home/marler8997/.cache/zig/o/462508f9f92ca4b6b4eeb91c3431f57d/libcompiler_rt.a"
+
 targetType "executable"
 mainSourceFile "dustmite.d"
